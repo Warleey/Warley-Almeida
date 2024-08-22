@@ -1,0 +1,121 @@
+/*CSS Global site*/
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; font-family: var(--font-family);}
+html {font-size: 62.5%;} 
+body { font-size: 1.6rem; margin-top: 15rem;}
+ul { list-style: none; }
+a { text-decoration: none; color: inherit;}
+h1 {font-size: 6.4rem; font-weight: 700; color: var(--cor-primaria); }
+.titulo-secundario { font-size: 4rem; font-weight: 700; color: var(--cor-primaria); margin-bottom: 20px;}
+.titulo-terciario { font-size: 3.2rem; font-weight: 500; line-height: 4.5rem; color: var(--escuro-cor-secundaria); margin-bottom: 20px;}
+p,.p {font-weight: 400; font-size: 1.6rem; line-height: 3.5rem; }
+p:not(:last-of-type), .p:not(:last-of-type) { margin-bottom: 2rem;}
+.btn { background-color: none; border: none; outline: none; padding: 1rem 4rem; display: inline-block; border-radius: 0.5rem; }
+.btn.btn-primario { background-color: var(--escuro-cor-secundaria); color: var(--branco); font-weight: 400; font-size: 1.4rem; }
+.acessos { display: flex; gap: 20px; justify-content: initial; margin-top: 14px; }
+.botao { padding: 10px 10px; background: linear-gradient(--FFFFFF, #FFFFFF); border-radius: 4px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); text-transform: uppercase; font: 600 0.875rem/1.35 "Roboto", sans-serif; max-width: max-content; border: none; cursor: pointer; }
+.max-width { width: 100%; max-width: 120rem; padding: 0 4rem; margin: 0 auto; margin-bottom: 26rem; }
+.mb-0 { margin-bottom: 0; }
+.mb-s { margin-bottom: 1rem;}
+.mb-m { margin-bottom: 2rem;}
+.mb-l { margin-bottom: 4rem; }
+.mb-xl { margin-bottom: 6rem; }
+
+/*CSS Navbar*/
+.navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 10; background-color: var(--branco); }
+.navbar .navbar_container { padding: 3rem 4rem 1rem; display: flex; justify-content: space-between; }
+.navbar .navbar_container .navbar_links li { display: inline-block; }
+.navbar .navbar_container .navbar_links li:not(:last-of-type) { margin-right: 2rem; }
+.navbar .navbar_container .navbar_links a { padding: 1rem; display: inline-block; }
+.navbar .navbar_container .navbar_links a:hover { color: var(--cor-treciaria); }
+.navbar.active { box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); }
+.navbar .navbar_container .navbar_mobile,
+.navbar .navbar_container .navbar_mobile .mobile_links { display: none; }
+
+/*CSS Header*/
+header { display: flex; justify-content: space-between; align-items: center; gap: 4rem; scroll-margin-top: 20rem; }
+header .header-esquerda { max-width: 62rem; flex: 1; }
+header .header-esquerda p{ margin-top: 2rem; margin-bottom: 4rem; max-width: 50rem; }
+header .header-direita .header-imagem { position: relative; line-height: 0; }
+header .header-direita .header-imagem::after {content: ''; display: block; width: 100%; height: 100%; border: 1px solid var(--cor-terciaria); position: absolute; top: -1.5rem; right: -1.5rem; border-radius: 0.5rem; z-index: -1; }
+header .header-direita .header-imagem .warley { border-radius: 0.5rem; min-width: 25rem; max-width: 100%; }
+header .header-direita .header-imagem .background { position: absolute; top: -4rem; right: -2.5rem; z-index: -1; }
+
+/*CSS Sobre mim*/
+.sobre { display: flex; justify-content: space-between; gap: 4rem; scroll-margin-top: 20rem; }
+.sobre .sobre-esquerda { max-width: 40rem; flex: 1; }
+.sobre .sobre-esquerda p { margin: 1rem 0 2rem; }
+.sobre .sobre-esquerda ul { margin-left: -1.2rem; }
+.sobre .sobre-esquerda ul li { display: inline-block; }
+.sobre .sobre-esquerda ul li a { display: inline-block; padding: 1rem; }
+.sobre-direita { flex: 1; max-width: 66rem; }
+
+/*CSS Skills*/
+.skills { background-color: var(--claro-cor-terciaria); scroll-margin-top: 15rem; }
+.skills .skills-container { padding: 6rem 4rem; text-align: center; margin-bottom: 14rem; }
+.skills .skills-container .descricao { max-width: 56rem; margin: 0 auto 6rem; }
+.skills .skills-container ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); gap: 2rem; }
+.skills .skills-container ul li .image-container { background-color: var(--branco); padding: 2rem; border-radius: 50%; width: 7rem; height: 7rem; display: flex; justify-content: center; align-items: center; box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1); margin: 0 auto; }
+.skills .skills-container ul li h3 { font-size: 1.6rem; font-weight: 500; margin: 2rem 0 1rem; }
+
+/*CSS Projetos*/
+.projetos { margin-bottom: 16rem; scroll-margin-top: 15rem; }
+.projetos .projetos-container {text-align: center; margin: 0 auto 6rem; }
+.projetos ul li { display: flex;justify-content: space-between; align-items: center; gap: 4rem; }
+.projetos ul li.projeto-lista-r { flex-direction: row-reverse; }
+.projetos ul li:not(:last-of-type) { margin-bottom: 12rem; }
+.projetos ul li.image img { width: 100%; min-width: 40rem; max-width: 47rem; height: auto; background-color: var(--preto); padding: 2rem; border-radius: 50%; width: 7rem; height: 7rem; display: flex; justify-content: center; align-items: center; box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1); margin: 0 auto; }
+.projetos ul li .info-projetos { max-width: 47rem; }
+.box-projetos { background-color: var(--branco); }
+
+/*CSS footer*/
+footer { background-color: var(--claro-cor-terciaria); }
+footer .footer-container { text-align: center; padding: 6rem 2rem 1rem; max-width: 47rem; }
+footer .footer-container .footer-contato span { display: block; font-weight: 500; }
+footer .footer-container ul li { display: inline-block; }
+footer .footer-container ul a { display: inline-block; padding: 1rem; }
+footer .footer-container .footer-copy { font-size: 1.4rem; }
+
+/*--------------------------------------RESPONSIVOS--------------------------------------*/
+
+/*Responsivo GLOBAL*/
+@media only screen and (max-width: 1024px) {html { font-size: 60%; } h1 { font-size: 6rem; }}
+@media only screen and (max-width: 768px) {html { font-size: 58%; } .max-width { padding: 0 2rem; }}
+@media only screen and (max-width: 425px) { h1 { font-size: 4.2rem; }}
+
+/*Responsivo Navbar*/
+@media only screen and (max-width: 768px) { .navbar .navbar_container .navbar_links { display: none; }
+.navbar .navbar_container .navbar_mobile { display: flex; align-items: center; }
+.navbar .navbar_container .navbar_mobile img { width: 3.6rem; height: 3.6rem; cursor: pointer; }
+.navbar .navbar_container .navbar_mobile.active .mobile_links { display: flex; flex-direction: column; background-color: var(--branco); width: 100%; position: absolute; top: 98%; left: 0; padding: 1rem 0; box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.1); z-index: 1; }
+.navbar .navbar_container .navbar_mobile.active .mobile_links li { margin-right: 0; }
+.navbar .navbar_container .navbar_mobile.active .mobile_links li a { padding: 1rem; display: block; text-align: center; }}
+
+/*Responsivo Header*/
+@media only screen and (max-width: 768px) { header { flex-direction: column-reverse; text-align: center; } header .header-esquerda p { margin: 2rem auto 4rem; } }
+
+/*Responsivo Sobre mim*/
+@media only screen and (max-width: 768px) {
+.sobre { flex-direction: column; align-items: center; } 
+.sobre .sobre-esquerda { max-width: 66rem; text-align: center; } 
+.sobre .sobre-direita { text-align: center; } }
+
+/*Responsivo Projetos*/
+@media only screen and (max-width: 768px) {
+.projetos ul li, 
+.projetos ul li.projeto-lista-r { flex-direction: column; } 
+.projetos ul li .info-projetos { max-width: 66rem; } 
+.projetos ul li .image img { min-width: auto; }}
+@media only screen and (max-width: 500px) { .projetos ul li .image img { width: 300px; }}
+
+/*Variáveis*/
+:root {
+  --branco: #ffffff;   /* Branco */
+  --cinza: #2C2C2C;  /* Cinza Escuro */
+  --preto: #000000;  /* Preto */
+  --cor-primaria: #6A6F8D;   /* Azul Petróleo (usado no lugar do verde musgo) */
+  --cor-secundaria: #222434; /* Verde Musgo (originalmente sugerido, pode ser usado como cor de destaque) */
+  --escuro-cor-secundaria: #454963;  /* Um tom mais escuro de Azul Petróleo */
+  --cor-terciaria: #C0C0C0;   /* Prata */
+  --claro-cor-terciaria: #D3D3D3; /* Um tom mais claro de Prata */
+  --cor-texto: #FFFFFF;  /* Branco (para textos sobre fundos escuros) */
+  --font-family: 'Montserrat', sans-serif;} /*Gosto desse tipo de fonte*/
