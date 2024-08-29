@@ -57,7 +57,7 @@ header .header-direita .header-imagem .background { position: absolute; top: -4r
 .skills .skills-container ul li .image-container { background-color: var(--branco); padding: 2rem; border-radius: 50%; width: 7rem; height: 7rem; display: flex; justify-content: center; align-items: center; box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1); margin: 0 auto; }
 .skills .skills-container ul li h3 { font-size: 1.6rem; font-weight: 500; margin: 2rem 0 1rem; }
 
-/*CSS Projetos*/
+/*CSS Projetos página 1*/
 .projetos { margin-bottom: 16rem; scroll-margin-top: 15rem; }
 .projetos .projetos-container {text-align: center; margin: 0 auto 6rem; }
 .projetos ul li { display: flex;justify-content: space-between; align-items: center; gap: 4rem; }
@@ -75,6 +75,13 @@ footer .footer-container ul li { display: inline-block; }
 footer .footer-container ul a { display: inline-block; padding: 1rem; }
 footer .footer-container .footer-copy { font-size: 1.4rem; }
 
+/*--------------------------------------ANIMAÇÃO--------------------------------------*/
+.fadeInDown { transform: translate3d(0, -20px, 0); }
+.fadeInUp { transform: translate3d(0, 20px, 0); }
+.fadeInRight { transform: translate3d(20px, 0, 0); }
+.fadeInLeft { transform: translate3d(-20px, 0, 0); }
+[data-anime] { opacity: 0; }
+.anime { opacity: 1; transform: none; transition: transform 0.8s, opacity 0.8s; }
 /*--------------------------------------RESPONSIVOS--------------------------------------*/
 
 /*Responsivo GLOBAL*/
@@ -118,4 +125,4 @@ footer .footer-container .footer-copy { font-size: 1.4rem; }
   --cor-terciaria: #C0C0C0;   /* Prata */
   --claro-cor-terciaria: #D3D3D3; /* Um tom mais claro de Prata */
   --cor-texto: #FFFFFF;  /* Branco (para textos sobre fundos escuros) */
-  --font-family: 'Montserrat', sans-serif;} /*Gosto desse tipo de fonte*/
+  --font-family: 'roboto', sans-serif;} /*Gosto desse tipo de fonte*/

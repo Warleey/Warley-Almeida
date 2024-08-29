@@ -8,7 +8,9 @@
   <link rel="icon" href="./img/icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 
@@ -20,20 +22,20 @@
         <img src="/img/marca.svg" alt="Logo" >
       </a>
       <ul class="navbar_links">
-        <li><a href="#header">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#footer">Contato</a></li>
+        <li><a href="#header" data-anime="100">Início</a></li>
+        <li><a href="#sobre" data-anime="200">Sobre</a></li>
+        <li><a href="#skills" data-anime="400">Habilidades</a></li>
+        <li><a href="#projetos" data-anime="600">Projetos</a></li>
+        <li><a href="#footer"data-anime="800">Contato</a></li>
       </ul>
       <div class="navbar_mobile">
-        <img src="/img/menu.svg" alt="menu" class="burguer" />
+        <img src="/img/menu.svg" alt="menu" class="burguer">
         <ul class="mobile_links">
           <li><a href="#header">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#skills">Habilidades</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#footer">Contato</a></li>
+          <li><a href="#sobre" data-anime="200">Sobre</a></li>
+          <li><a href="#skills" data-anime="400">Habilidades</a></li>
+          <li><a href="#projetos"data-anime="600">Projetos</a></li>
+          <li><a href="#footer"data-anime="800">Contato</a></li>
         </ul>
       </div>
     </div>
@@ -42,15 +44,15 @@
 
 <!--Header início-->
   <header id="header" class="max-width">
-    <div class="header-esquerda">
+    <div class="header-esquerda fadeInDown" data-anime="200">
       <h1>Olá, Sou Warley Almeida Desenvolvedor Front-End</h1>
       <p> 
         Desenvolvo pequenos projetos com <b>HTML, CSS</b> e <b>JavaScript,</b> buscando minha primeira oportunidade como desenvolvedor. Comprometido com aprendizado contínuo e prontidão para contribuir em projetos desafiadores.
       </p>
-      <a href="#sobre" class="btn btn-primario">Saiba Mais!</a>
+      <a href="#sobre" class="btn btn-primario fadeInDown" data-anime="600">Saiba Mais!</a>
     </div>
     <div class="header-direita">
-      <div class="header-imagem">
+      <div class="header-imagem fadeInDown" data-anime="400">
         <img src="/img/Perfil.png" alt="Warley Almeida" class="warley">
         <img src="/img/abstract.svg" alt="background" class="background">
       </div>
@@ -60,10 +62,10 @@
 <!--Sobre mim-->
 <section id="sobre" class="sobre max-width">
   <div class="sobre-esquerda">
-    <h2 class="titulo-secundario">Além do código: quem sou eu?</h2>
-    <p>Estou disponível para novos projetos no momento. fique à vontade para conectar-se através de outras redes sociais, como <b>GitHub</b> e <b>LinkedIn.</b>
+    <h2 class="titulo-secundario fadeInLeft " data-anime="200">Além do código: quem sou eu?</h2>
+    <p data-anime="400">Estou disponível para novos projetos no momento. fique à vontade para conectar-se através de outras redes sociais, como <b>GitHub</b> e <b>LinkedIn.</b>
     </p>
-    <ul>
+    <ul class="fadeInLeft " data-anime="600">
       <li>
         <a href="https://www.linkedin.com/in/warley-almeida/"><img src="/img/linkedin.svg" alt="LinkedIn"></a>
       </li>
@@ -77,9 +79,9 @@
   </div>
 
   <div class="sobre-direita">
-    <h3 class="titulo-terciario mb-m">Desenvolvedor Front transformando ideias em soluções digitais, com paixão pelo design e desenvolvimento.
+    <h3 class="titulo-terciario mb-m fadeInLeft "data-anime="200">Desenvolvedor Front transformando ideias em soluções digitais, com paixão pelo design e desenvolvimento.
     </h3>
-    <p>
+    <p class="fadeInLeft " data-anime="400">
       Sou estudante de Análise e Desenvolvimento de Sistemas, desenvolvendo pequenos projetos com <b>HTML</b>, <b>CSS</b> e <b>JavaScript</b> enquanto busco minha primeira oportunidade como desenvolvedor. Sou comprometido com o aprendizado contínuo e sempre pronto para contribuir em projetos desafiadores. Paralelamente, estou me especializando em <b>Product Design</b> pela <b>Cubos Academy</b>, onde atuo em todo o processo de design, focado em solucionar problemas reais com impacto social.
     </p>
 
@@ -89,13 +91,13 @@
 <!--Campos para colocar minhas habilidades-->
 
 <section id="skills" class="skills">
-  <div class="skills-container max-width">
+  <div class="skills-container max-width fadeInRight"data-anime="200" >
     <h2 class="titulo-terciario">Minhas Habilidades</h2>
     <p class="descricao">
       Explore as habilidades e ferramentas que utilizo para desenvolver soluções criativas e funcionais, oferecendo o melhor para meus clientes.
     </p>
     <ul>
-      <li class="skills__item">
+      <li class="skills__item fadeInRight" data-anime="400">
         <div class="image-container">
           <img src="/img/html.svg" alt="html">
         </div>
@@ -103,7 +105,7 @@
         <p>Estruturo páginas web de maneira semântica e eficiente, garantindo que o conteúdo seja acessível e bem organizado.</p>
       </li>
 
-      <li class="skills__item">
+      <li class="skills__item fadeInRight" data-anime="600">
         <div class="image-container">
           <img src="/img/css.svg" alt="css">
         </div>
@@ -111,7 +113,7 @@
         <p>Transformo designs em interfaces visuais atraentes e responsivas, utilizando técnicas modernas de estilização.</p>
       </li>
 
-      <li class="skills__item">
+      <li class="skills__item fadeInRight" data-anime="800">
         <div class="image-container">
           <img src="/img/javascript.svg" alt="javascript">
         </div>
@@ -119,7 +121,7 @@
         <p>Desenvolvo funcionalidades dinâmicas e interativas, criando uma experiência de usuário fluida e envolvente.</p>
       </li>
 
-      <li class="skills__item">
+      <li class="skills__item fadeInRight" data-anime="1000">
         <div class="image-container">
           <img src="/img/Figma.svg" alt="figma">
         </div>
@@ -131,55 +133,54 @@
 
 <!--Projetos-->
 <section id="projetos" class="projetos max-width">
-  <div class="projetos-container">
-    <h2 class="titulo-secundario">Meus projetos</h2>
+  <div class="projetos-container fadeInUp" data-anime="200">
+    <h2 class="titulo-secundario ">Meus projetos</h2>
     <p class="projetos-p">Confira meus projetos disponíveis, cada um refletindo minha dedicação e resultados significativos. Estou aberto a feedbacks, sinta-se à vontade para conhecer meu trabalho.</p>
   </div>
+
+  <!--Cards projetos iniciam-se aqui-->
   <ul>
     <li>
-      <div class="image">
+      <div class="image fadeInUp"data-anime="600">
         <img src="/img/projeto_bikcraft_vitrine.png" alt="Bikcraft">
       </div>
-      <div class="info-projetos">
+      <div class="info-projetos fadeInUp" data-anime="600">
         <h3 class="titulo-terciario">Bikcraft</h3>
         <p>
-          Projeto desenvolvido para demonstrar minhas habilidades em front-end. Utilizando HTML, CSS e JavaScript.  O Bikcraft é mais do que apenas um site, é uma jornada visualmente deslumbrante através do mundo do design responsivo, mantendo a experiência do usuário em dispositivos móveis.
+          O projeto Bikcraft foi desenvolvido para demonstrar minhas habilidades em front-end, utilizando HTML, CSS e JavaScript. Mais do que um simples site, o Bikcraft oferece uma experiência visualmente envolvente e responsiva, destacando-se pela atenção à experiência do usuário, especialmente em dispositivos móveis.
         </p>
         <div class="acessos"> 
-          <button class="botao"><img src="./img/github.svg" alt=""><a href="https://github.com/Warleey/bikcraft">Acessar Repositorio &rarr;</a></button>
-          <button class="botao"><img src="/img/icon-internet.svg" alt=""><a href="https://bikcraft-virid.vercel.app/">Acessar Site &rarr;</a></button>
+          <a href="./projetos/bikcraft.html" class="btn btn-primario fadeInDown" data-anime="600">Saiba Mais! &rarr;</a>
         </div>
       </div>
     </li>
 
-    <li class="projeto-lista-r">
+    <li class="projeto-lista-r fadeInUp" data-anime="600">
       <div class="image">
         <img src="/img/projeto_hogwards_vitrine.png" alt="Hogwards">
       </div>
       <div class="info-projetos">
         <h3 class="titulo-terciario">Hogwards Store</h3>
         <p>
-          Projeto inspirado no universo de ficção de Harry Potter, criado para demonstrar minhas habilidades em desenvolvimento front-end, especificamente no uso das propriedades do Flexbox para criar um layout responsivo.
+          Este projeto, inspirado no universo de Harry Potter, foi desenvolvido para demonstrar minhas habilidades em front-end, destacando o uso de Flexbox para criar um layout responsivo e envolvente, proporcionando uma experiência de usuário que se adapta perfeitamente a qualquer dispositivo.
         </p>
         <div class="acessos"> 
-          <button class="botao"><img src="./img/github.svg" alt=""><a href="https://github.com/Warleey/Hogwards-Store">Acessar Repositorio &rarr;</a></button>
-          <button class="botao"><img src="/img/icon-internet.svg" alt=""><a href="https://hogwards-store.vercel.app/">Acessar Site &rarr;</a></button>
+          <a href="/projetos/hogwards.html" class="btn btn-primario fadeInDown" data-anime="600">Saiba Mais! &rarr;</a>
         </div>
       </div>
     </li>
 
     <li>
-      <div class="image">
-        <img src="/img/projeto_nwl_vitrine.png" alt="NWL-Journey">
+      <div class="image fadeInUp"data-anime="600">
+        <img src="/img/projeto_nwl_vitrine.png" alt="Bikcraft">
       </div>
-      <div class="info-projetos">
-        <h3 class="titulo-terciario">Planejador de Viagens</h3>
+      <div class="info-projetos fadeInUp" data-anime="600">
+        <h3 class="titulo-terciario">Planejador de Viagem</h3>
         <p>
-          O projeto NWL Journey foi desenvolvido como uma aplicação front-end, com uma estrutura sólida baseada em HTML, estilização avançada utilizando CSS, e lógica de programação aplicada através de JavaScript. O projeto também integra o uso da biblioteca Day.js para manipulação eficiente de datas, garantindo uma experiência de usuário robusta e dinâmica.
+          O projeto NWL Journey é uma aplicação front-end que combina uma estrutura sólida em HTML, estilização avançada com CSS, e lógica dinâmica através de JavaScript. Integrando a biblioteca Day.js para manipulação eficiente de datas, o projeto oferece uma experiência de usuário robusta, intuitiva e envolvente.
         </p>
         <div class="acessos"> 
-          <button class="botao"><img src="./img/github.svg" alt=""><a href="https://github.com/Warleey/NWL-Journey">Acessar Repositorio &rarr;</a></button>
-          <button class="botao"><img src="/img/icon-internet.svg" alt=""><a href="https://nwl-journey.vercel.app/">Acessar Site &rarr;</a></button>
+          <a href="/projetos/planejador.html" class="btn btn-primario fadeInDown" data-anime="600">Saiba Mais! &rarr;</a>
         </div>
       </div>
     </li>
@@ -187,10 +188,9 @@
   </ul>
 </section>
 
-
 <!--Footer-->
 <footer id="footer">
-  <div class="footer-container max-width mb-0">
+  <div class="footer-container max-width mb-0 fadeInUp" data-anime="200">
     <h2 class="titulo-terciario mb-s">Vamos conversar?</h2>
     <p class="mb-m">Ficarei feliz em saber mais sobre seus projetos e como podemos trabalhar juntos para torná-los realidade.</p>
     <div class="footer-contato mb-m">
@@ -210,6 +210,8 @@
   </div>
 </footer>
 
-  <script src="scripts/index.js"></script>
+<script src="./js/plugins/simple-anime.js"></script>
+<script src="/js/index.js"></script>
+
 </body>
 </html>
