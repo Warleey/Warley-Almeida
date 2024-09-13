@@ -12,6 +12,26 @@ window.addEventListener('scroll', function () {
 });
 
 // Animação
-if(window.SimpleAnime) {
+if(window.SimpleAnime) { 
   new SimpleAnime();
   } 
+
+
+//Ir ao topo
+  window.onscroll = function() {
+    displayScrollButton();
+};
+
+function displayScrollButton() {
+    let topButton = document.getElementById("topButton");
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        topButton.style.display = "block"; // Mostra o botão
+    } else {
+        topButton.style.display = "none"; // Esconde o botão
+    }
+}
+
+// Função para rolar ao topo da página
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Rola suavemente ao topo
+}

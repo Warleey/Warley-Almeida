@@ -11,6 +11,7 @@ p,.p {font-weight: 400; font-size: 1.6rem; line-height: 3.5rem; }
 p:not(:last-of-type), .p:not(:last-of-type) { margin-bottom: 2rem;}
 .btn { background-color: none; border: none; outline: none; padding: 1rem 4rem; display: inline-block; border-radius: 0.5rem; }
 .btn.btn-primario { background-color: var(--escuro-cor-secundaria); color: var(--branco); font-weight: 400; font-size: 1.4rem; }
+.btn.btn-primario:hover {background-color: #333;}
 .acessos { display: flex; gap: 20px; justify-content: initial; margin-top: 14px; }
 .botao { padding: 10px 10px; background: linear-gradient(--FFFFFF, #FFFFFF); border-radius: 4px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); text-transform: uppercase; font: 600 0.875rem/1.35 "Roboto", sans-serif; max-width: max-content; border: none; cursor: pointer; }
 .max-width { width: 100%; max-width: 120rem; padding: 0 4rem; margin: 0 auto; margin-bottom: 26rem; }
@@ -26,10 +27,11 @@ p:not(:last-of-type), .p:not(:last-of-type) { margin-bottom: 2rem;}
 .navbar .navbar_container .navbar_links li { display: inline-block; }
 .navbar .navbar_container .navbar_links li:not(:last-of-type) { margin-right: 2rem; }
 .navbar .navbar_container .navbar_links a { padding: 1rem; display: inline-block; }
-.navbar .navbar_container .navbar_links a:hover { color: var(--cor-treciaria); }
+.navbar .navbar_container .navbar_links a:hover { color: var(--escuro-cor-secundaria); }
+.navbar .navbar_container .navbar_linksb a:hover { color: var(--branco);}
 .navbar.active { box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); }
 .navbar .navbar_container .navbar_mobile,
-.navbar .navbar_container .navbar_mobile .mobile_links { display: none; }
+.navbar .navbar_container .navbar_mobile .mobile_links { display: none; color: var(--branco);}
 
 /*CSS Header*/
 header { display: flex; justify-content: space-between; align-items: center; gap: 4rem; scroll-margin-top: 20rem; }
@@ -82,6 +84,11 @@ footer .footer-container .footer-copy { font-size: 1.4rem; }
 .fadeInLeft { transform: translate3d(-20px, 0, 0); }
 [data-anime] { opacity: 0; }
 .anime { opacity: 1; transform: none; transition: transform 0.8s, opacity 0.8s; }
+
+/*--------------------------------------Botão de Voltar ao Topo--------------------------------------*/
+#topButton { display: none; position: fixed; bottom: 20px; right: 30px; z-index: 99; font-size: 20px; border: none; outline: none; background-color: var(--escuro-cor-secundaria); color: white; cursor: pointer; padding: 15px; border-radius: 10px; transition: background-color 0.3s ease;}
+#topButton:hover { background-color: #333; }
+
 /*--------------------------------------RESPONSIVOS--------------------------------------*/
 
 /*Responsivo GLOBAL*/
