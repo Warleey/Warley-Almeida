@@ -1,37 +1,156 @@
-const navbar = document.querySelector('.navbar');
-const mobileNavbar = document.querySelector('.navbar_mobile');
-const button = document.querySelector('.burguer');
+// função para efeito de digitação 
+function efeitoDigitacaoLoop(elemento, texto, velocidadeDigitando = 200, velocidadeApagando = 150, tempoEspera = 2500) {
+    let i = 0;
+    let apagando = false;
 
-button.addEventListener('click', function () {
-  mobileNavbar.classList.toggle('active');
-});
+    function digitar() {
+        if (!apagando) {
+            elemento.innerHTML = texto.substring(0, i + 1);
+            i++;
+            if (i === texto.length) {
+                apagando = true;
+                setTimeout(digitar, tempoEspera); // Espera antes de começar a apagar
+                return;
+            }
+        } else {
+            elemento.innerHTML = texto.substring(0, i - 1);
+            i--;
+            if (i === 0) {
+                apagando = false;
+            }
+        }
 
-window.addEventListener('scroll', function () {
-  if (this.window.pageYOffset > 0) return navbar.classList.add('active');
-  return navbar.classList.remove('active');
-});
+        const velocidade = apagando ? velocidadeApagando : velocidadeDigitando;
+        setTimeout(digitar, velocidade);
+    }
 
-// Animação
-if(window.SimpleAnime) { 
-  new SimpleAnime();
-  } 
+    digitar();
+}
+const spanDigitando = document.getElementById('digitando');
+const texto = 'Desenvolvedor Front End';
+efeitoDigitacaoLoop(spanDigitando, texto);
 
+// Final da função
 
-//Ir ao topo
-  window.onscroll = function() {
-    displayScrollButton();
-};
+// Função sumir a seta quando usuário rolar para baixo
 
-function displayScrollButton() {
-    let topButton = document.getElementById("topButton");
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-        topButton.style.display = "block"; // Mostra o botão
+window.addEventListener('scroll', function() {
+    const seta = document.querySelector('.seta-container');
+    if (window.scrollY > 100) {
+        seta.classList.add('oculto');
     } else {
-        topButton.style.display = "none"; // Esconde o botão
+        seta.classList.remove('oculto');
+    }
+});
+
+// Final da função
+
+// Função de scroll Reveal
+
+function revelarAoScroll() {
+    const elementos = document.querySelectorAll('.reveal');
+
+    for (let i = 0; i < elementos.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementoTopo = elementos[i].getBoundingClientRect().top;
+        const elementoVisivel = 300;
+
+        if (elementoTopo < windowHeight - elementoVisivel) {
+            elementos[i].classList.add('active');
+        } else {
+            elementos[i].classList.remove('active');
+        }
     }
 }
 
-// Função para rolar ao topo da página
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Rola suavemente ao topo
-}
+window.addEventListener('scroll', revelarAoScroll);
+window.addEventListener('load', revelarAoScroll);
+
+
+// Final da função
+
+// Função de scroll quando clicar na seta
+
+const seta = document.getElementById('scroll-down');
+
+seta.addEventListener('click', () => {
+    const proximaSection = document.querySelector('section:nth-of-type(2)');
+    proximaSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', revelarAoScroll);
+
+// Final da função
+
+//Função de carrossel
+
+$(document).ready(function () {
+	$(".owl-carousel").owlCarousel({
+		loop: true,
+		margin: 16,
+		autoplay: true,
+		autoplayTimeout: 1650,
+		autoplayHoverPause: true,
+		responsive: {
+			0: {
+				items: 1,
+			},
+			600: {
+				items: 2,
+			},
+			1000: {
+				items: 5,
+			},
+		},
+	});
+});
+
+// Função do formulário
+
+const textarea = document.querySelector("textarea");
+textarea.style.resize = "none";
+
+// Final da função
+
+// Função footer
+const anoAtual = new Date().getFullYear();
+const footerCopy = document.getElementById('footer-copy');
+
+footerCopy.innerHTML = `© ${anoAtual} Warley Almeida - Todos os direitos reservados.`;
+
+// -------------------------------Funções mobiles-------------------------------
+
+// Função menu mobile
+
+const menuIcon = document.querySelector("#menu-icon");
+const navbar = document.querySelector(".navbar_link");
+
+menuIcon.onclick = () => {
+  navbar.classList.toggle("active");
+};
+
+// Função para desativar carrossel em 480px
+$(document).ready(function () {
+    if ($(window).width() <= 480) {
+        $(".owl-carousel").trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+    } else {
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 16,
+            autoplay: true,
+            autoplayTimeout: 1650,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2,
+                },
+                600: {
+                    items: 2,
+                },
+                1000: {
+                    items: 5,
+                },
+            },
+        });
+    }
+});
