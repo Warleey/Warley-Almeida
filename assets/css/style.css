@@ -1,0 +1,10 @@
+@import url(./global.css);
+@import url(./variaveis.css);
+
+
+@import url(./componentes/header.css);
+@import url(./componentes/projetos.css);
+@import url(./componentes/skills.css);
+@import url(./componentes/projetos.css);
+@import url(./componentes/contato.css);
+@import url(./componentes/footer.css);
