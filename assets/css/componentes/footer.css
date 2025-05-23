@@ -1,0 +1,13 @@
+.copy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	margin-top: 32px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.footer {
+	background-color: rgba(0, 0, 0, 0.875);
+}

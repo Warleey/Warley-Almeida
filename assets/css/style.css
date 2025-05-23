@@ -8,3 +8,184 @@
 @import url(./componentes/projects.css);
 @import url(./componentes/contato.css);
 @import url(./componentes/footer.css);
+
+/*-----------Responsivo-----------*/
+/* Telas muito grandes - acima de 1440px */
+@media (min-width: 1440px) {
+    section {
+        padding: 128px 15%;
+    }
+}
+
+/* Notebook/Médio - até 1280px */
+@media (max-width: 1280px) {
+    .home_container {
+        gap: 80px;
+    }
+}
+
+/* Tablet Horizontal - até 1024px */
+@media (max-width: 1024px) {
+    header {
+        gap: 40px;
+        padding: 16px 40px;
+    }
+
+    .navbar_link {
+        gap: 20px;
+    }
+
+    .info_home h1 {
+        font-size: 64px;
+    }
+
+    .info_home span {
+        font-size: 32px;
+    }
+
+    .home_container {
+        gap: 60px;
+    }
+
+    .sobre_info {
+        gap: 3rem;
+        flex-direction: column;
+    }
+
+    .sobre img {
+        width: 40vw;
+    }
+}
+
+/* Tablet Vertical - até 768px */
+@media (max-width: 768px) {
+    header {
+        gap: 20px;
+        padding: 16px 24px;
+    }
+
+    .navbar_link {
+		position: absolute;
+		top: 50px;
+		right: 25px;
+		background-color: rgba(0, 0, 0, 0.95);
+		border: 1px solid #636262;
+		display: none;
+		flex-direction: column;
+		gap: 20px;
+		padding: 20px;
+		border-radius: 8px;
+    }
+
+	.navbar_link.active {
+		display: flex;
+	  }
+
+    #menu-icon {
+        display: block;
+        color: white;
+		cursor: pointer;
+    }
+
+    .home_container {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .info_home h1 {
+        font-size: 56px;
+    }
+
+    .info_home span {
+        font-size: 28px;
+    }
+
+    .sobre img {
+        width: 60vw;
+    }
+
+    .projetos_container {
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .box-btn {
+        flex-direction: column;
+    }
+
+    .box-btn-c {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+/* Celulares grandes - até 480px */
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 2.5rem;
+    }
+
+    .info_home h1 {
+        font-size: 42px;
+    }
+
+    .info_home span {
+        font-size: 22px;
+    }
+
+    .sobre img {
+        width: 80vw;
+    }
+
+    .redes {
+        gap: 1rem;
+    }
+
+    .redes i {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 100px 5%;
+    }
+
+	.owl-carousel {
+		display: block;
+	}
+	.owl-stage-outer,
+	.owl-stage,
+	.owl-item {
+		width: 100% !important;
+		transform: none !important;
+	}
+	.skills_content {
+		width: 100% !important;
+		margin: 10px 0;
+	}
+	.owl-nav,
+	.owl-dots {
+		display: none;
+	}
+}
+
+/* Celulares muito pequenos - até 375px */
+@media (max-width: 375px) {
+    .info_home h1 {
+        font-size: 36px;
+    }
+
+    .info_home span {
+        font-size: 20px;
+    }
+
+    .sobre img {
+        width: 90vw;
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+}
