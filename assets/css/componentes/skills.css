@@ -6,29 +6,33 @@
 }
 
 .skills_container {
-	width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
 }
 
+
 .skills_content {
-	align-items: center;
-	width: auto;
-	border: 1px solid #636262;
-	color: #ffffff;
-	display: flex;
-	border-radius: 16px;
-	padding: 10px;
-	margin: 10px;
-	gap: 16px;
-	transition: 0.2s ease-in-out;
-	cursor: pointer;
-	background: #0e1013;
+  	flex: 1 1 180px; /* Cresce, encolhe, mínimo 180px */
+  	max-width: 220px;
+  	border: 1px solid #636262;
+  	color: #ffffff;
+  	display: flex;
+  	border-radius: 16px;
+  	padding: 12px;
+  	gap: 16px;
+  	transition: 0.2s ease-in-out;
+  	cursor: pointer;
+  	background: #0e1013;
+  	align-items: center;
 }
 
 .skills_content:hover {
-	transform: scale(1.01);
-	background-color: #000000;
-	color: #ffffff;
-	border: 1px solid #007bff;
+  	transform: scale(1.01);
+  	background-color: #000000;
+  	color: #ffffff;
+  	border: 1px solid #007bff;
 }
 
 .skills_content p {
@@ -36,16 +40,14 @@
 }
 
 .skills_icons {
-	display: flex;
-	border-radius: 10px;
-	padding: 10px;
-	justify-content: center;
+  	display: flex;
+  	border-radius: 10px;
+  	padding: 10px;
+  	justify-content: center;
 }
 
-.skills_icons img {
-	display: flex;
-	width: 36px;
-	height: 32px;
+.icon {
+	font-size: 50px !important;
 }
 
 .owl-carousel {

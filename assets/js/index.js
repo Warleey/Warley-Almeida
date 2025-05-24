@@ -98,9 +98,15 @@ $(document).ready(function () {
 			600: {
 				items: 2,
 			},
-			1000: {
-				items: 5,
+			768: {
+				items: 3,
 			},
+			1024: {
+				items: 4, // A partir de 1024px mostra 4
+			},
+			1280: {
+				items: 5, // A partir de 1280px mostra 5
+			}
 		},
 	});
 });
@@ -129,9 +135,9 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
 };
 
-// Função para desativar carrossel em 480px
+// Função para desativar carrossel em 640px
 $(document).ready(function () {
-    if ($(window).width() <= 480) {
+    if ($(window).width() <= 640) {
         $(".owl-carousel").trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
     } else {
         $(".owl-carousel").owlCarousel({
