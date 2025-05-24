@@ -137,7 +137,7 @@ menuIcon.onclick = () => {
 
 // Função para desativar carrossel em 640px
 $(document).ready(function () {
-    if ($(window).width() <= 640) {
+    if ($(window).width() <= 641) {
         $(".owl-carousel").trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
     } else {
         $(".owl-carousel").owlCarousel({
