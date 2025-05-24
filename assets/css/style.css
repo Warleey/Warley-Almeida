@@ -156,6 +156,9 @@
 
 /* Telas muito pequenas */
 @media screen and (max-width: 375px) {
+    .navbar_link {
+        right: 10px;
+    }
     .subtitulo {
         font-size: 12px;
     }
@@ -166,6 +169,5 @@
     .card p {
         font-size: 12px;
     }
-
     /* Reduz ainda mais gaps e tamanhos */
 }
