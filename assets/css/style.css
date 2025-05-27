@@ -155,7 +155,7 @@
 }
 
 /* Telas muito pequenas */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 384px) {
     .navbar_link {
         right: 10px;
     }
