@@ -134,7 +134,7 @@
     }
     
     .info_home span {
-        font-size: 26px;
+        font-size: 20px;
     }
     /* Textos menores, colunas viram linhas */
 }
@@ -157,7 +157,7 @@
 /* Telas muito pequenas */
 @media screen and (max-width: 384px) {
     .navbar_link {
-        right: 10px;
+        right: 18px;
     }
     .subtitulo {
         font-size: 12px;

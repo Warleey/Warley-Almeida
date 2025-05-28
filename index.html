@@ -16,6 +16,7 @@
   </head>
 
   <body>
+	<canvas id="stars"></canvas>
     <main>
       <!--Navbar-->
       <header class="header">
@@ -34,7 +35,7 @@
       </header>
 
       <!--Home-->
-			<section id="home" class="home reveal">
+			<section id="home" class="home reveal home_wrapper">
 				<div class="home_container">
 					<div class="info_home">
 						<div class="texto">
@@ -59,7 +60,7 @@
       </section>
 
       <!--Sobre mim-->
-      <section id="sobre" class="sobre reveal">
+      <section id="sobre" class="sobre reveal home_wrapper">
         <h3 class="subtitulo">Conheça um pouco</h3>
         <h2 class="titulo texto">Sobre mim</h2>
 
@@ -103,7 +104,7 @@
       </section>
 
       <!--Habilidades-->
-			<section id="habilidades" class="skills reveal">
+			<section id="habilidades" class="skills reveal home_wrapper">
 				<h3 class="subtitulo">Conheça um pouco minhas</h3>
 				<h2 class="titulo texto">Habilidades</h2>
 				<div class="skills_container owl-carousel">
@@ -174,7 +175,7 @@
 			</section>
 
       			<!--Projetos-->
-			<section id="projetos" class="projetos reveal">
+			<section id="projetos" class="projetos reveal home_wrapper">
 				<h2 class="titulo texto">Meus Projetos</h2>
 
 				<div class="projetos_container">
@@ -225,7 +226,7 @@
 			</section>
 
       			<!--Contato-->
-			<section id="contato" class="contato reveal">
+			<section id="contato" class="contato reveal home_wrapper">
 				<div class="contato-box">
 					<h2 class="titulo texto">Contato</h2>
 					<h3 class="subtitulo">
@@ -260,13 +261,15 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer home_wrapper">
 			<p class="copy" id="footer-copy">© 2024 Warley Almeida - Todos os direitos reservados.</p>
 		</footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+		<script src="/assets/js/stars.js"></script>
 		<script src="/assets/js/index.js"></script>
+		
 
 
 
